@@ -9,42 +9,23 @@ class Main extends Component{
     render(){
         return (
             <div>
-            <Layout className="layout">
-                <Header>
-                    <div className="logo" />
-                    <Menu
-                        theme="dark"
-                        mode="horizontal"
-                        defaultSelectedKeys={['2']}
-                        style={{ lineHeight: '64px' }}
-                    >
-                        <Menu.Item key="1"><Link to="/aboutMe">aboutMe </Link></Menu.Item>
-                        <Menu.Item key="2"><Link to="/demo">demo </Link></Menu.Item>
-                        <Menu.Item key="3"><Link to="/blog">blog </Link></Menu.Item>
-                    </Menu>
-                </Header>
-                <Content style={{ padding: '0 50px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>List</Breadcrumb.Item>
-                        <Breadcrumb.Item>App</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-                        {this.props.children}
+                <div className="Main_top">
+                    <div className="top-con">
+                        <ul>
+                            <li><Link to="/main">AboutMe</Link></li>
+                            <li><Link to="/demo">Demo</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
+                        </ul> 
                     </div>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    Ant Design ©2016 Created by Ant UED
-                </Footer>
-            </Layout>
+                </div>
+                <div className="con">
+                    {this.props.children}
+                </div>
+
+                <div className="foot">
+                    <p>LiuHuiMin'world ©2015 Created by LHM</p>
+                </div>
           </div>
-            // <div>
-            //     <h3>Main</h3>
-            //     <Link to="/aboutMe">aboutMe </Link>
-            //     <Link to="/demo">demo </Link>
-            //     <Link to="/blog">blog </Link>
-            //     {this.props.children}
-            // </div>
         );
     }
 }
