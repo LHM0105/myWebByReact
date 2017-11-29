@@ -1,12 +1,14 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router/lib';
+import {Icon} from "antd";
 
 class AboutMe extends Component{
     render(){
         return (
-            <div>
-                <h3>这是aboutMe页</h3>
-                <Link to="/main">返回main</Link>
+            <div className="AM">
+                <h4><Icon type="idcard" />LHM</h4>
+                <h4>E-mail</h4>
+                <p>liuhuimin0105@qq.com</p>
             </div>
         );
     }

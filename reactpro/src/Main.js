@@ -12,13 +12,14 @@ class Main extends Component{
                 <div className="Main_top">
                     <div className="top-con">
                         <ul>
-                            <li><Link to="/main">AboutMe</Link></li>
-                            <li><Link to="/demo">Demo</Link></li>
-                            <li><Link to="/blog">Blog</Link></li>
+                            <li><Link to="/aboutMe" activeStyle={{textDecoration:"underline"}}>AboutMe</Link></li>
+                            <li><Link to="/demo" activeStyle={{textDecoration:"underline"}}>Demo</Link></li>
+                            <li><Link to="/blog" activeStyle={{textDecoration:"underline"}}>Blog</Link></li>
+                            <li className="link-r"><Link to="/">返回首页</Link></li>
                         </ul> 
                     </div>
                 </div>
-                <div className="con">
+                <div className="conBox">
                     {this.props.children}
                 </div>
 

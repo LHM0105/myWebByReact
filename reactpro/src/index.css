@@ -130,7 +130,8 @@ html,body,#root,.App{
 
 }
 .Main_top .top-con ul{
-  float: left;
+  width: 1000px;
+  margin: 0 auto;
 }
 .Main_top .top-con ul li{
   float: left;
@@ -144,15 +145,9 @@ html,body,#root,.App{
   float: left;
   font-weight: 600;
 }
-.Main_top .top-con ul li a:visited{
-  color:#fff;
-  text-decoration: underline;
+.Main_top .top-con ul .link-r{
+  float: right;
 }
-.Main_top .top-con ul li a:hover{
-  /* color: rgba(100, 255, 255,1); */
-  text-decoration: underline;
-}
-
 .foot{
   background: rgba(255, 255, 255, .2);
   height: 80px;
@@ -167,6 +162,40 @@ html,body,#root,.App{
   color: #fff;
   
 }
-.con{
-  
+
+.conBox{
+  width:1000px;
+  /* min-height: 500px;
+  height: 500px !important;
+  height: auto; */
+  height: 100%;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 255,.2); */
+}
+
+.AM{
+  color: #fff;
+  font-size: 16px;
+}
+.AM h4{
+  color: #fff;
+  font-size: 18px;
+}
+.B_left{
+  float: left;
+  width: 300px;
+  background: rgba(255, 255, 255, .2);
+  color: #fff;
+  font-size: 16px;
+}
+.B_left>ul>li>a{
+  color: #fff;
+  height: 100%;
+}
+.B_con{
+  float: right;
+  width: 700px;
+  /* min-height: 1000px; */
+
+  background: #fff;
 }
