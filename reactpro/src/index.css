@@ -55,14 +55,29 @@ html,body,#root,.App{
   height: 100%;
   position: absolute;
   top: 50px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective:1400px;
   perspective-origin: left top; 
 }
 @keyframes rounding{
   /*x,y,z三个方向360°旋转*/
-  from{transform: rotate3d(0) scale3d(0);}
-  to{transform:rotate3d(1,1,1,360deg)  scale3d(1.5,1.5,1.5);
+  from{
+    -webkit-transform: rotate3d(0) scale3d(0);
+    -moz-transform: rotate3d(0) scale3d(0);
+    -ms-transform: rotate3d(0) scale3d(0);
+    -o-transform: rotate3d(0) scale3d(0);
+    transform: rotate3d(0) scale3d(0);
+  }
+  to{
+    transform:rotate3d(1,1,1,360deg)  scale3d(1.5,1.5,1.5);
+    -o-transform:rotate3d(1,1,1,360deg)  scale3d(1.5,1.5,1.5);
+    -ms-transform:rotate3d(1,1,1,360deg)  scale3d(1.5,1.5,1.5);
+    -moz-transform:rotate3d(1,1,1,360deg)  scale3d(1.5,1.5,1.5);
+    -webkit-transform:rotate3d(1,1,1,360deg)  scale3d(1.5,1.5,1.5);
   }
 }
 
@@ -72,15 +87,22 @@ html,body,#root,.App{
   left: 50%;
   margin-left: -50px;
   width:100px;height: 100px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style:preserve-3d;
+  -webkit-transform-origin:50px 50px 50px;
+  -moz-transform-origin:50px 50px 50px;
+  -ms-transform-origin:50px 50px 50px;
+  -o-transform-origin:50px 50px 50px;
   transform-origin:50px 50px 50px;
   animation:rounding 8s linear infinite alternate;
+  -o-animation:rounding 8s linear infinite alternate;
+  -webkit-animation:rounding 8s linear infinite alternate;
+  -moz-animation:rounding 8s linear infinite alternate;
 }
 
-@keyframes move1{
-  from{border-radius:10px;}
-  to{border-radius: 100px;}
-}
 .Home_box .wrap .box div{
   position: absolute;left: 0;top: 0;
   width:100px;height: 100px;

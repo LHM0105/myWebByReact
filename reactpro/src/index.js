@@ -7,12 +7,16 @@ import registerServiceWorker from './registerServiceWorker';
 import "antd/dist/antd.css"
 // 引入路由所需模块
 import {Router,Route,Link,browserHistory,IndexRoute, IndexRedirect} from "react-router"
+
+
+
 // 引入页面组件
 import Home from "./Home"
 import Main from "./Main"
 import AboutMe from './AboutMe'
 import Blog from './Blog'
 import Demo from './Demo'
+import DirectMerchantList from './directMerchantList'
 ReactDOM.render(<Router history={browserHistory}>
     <Route path="/" component={App}>
         <IndexRoute component={Home}></IndexRoute>
@@ -20,7 +24,12 @@ ReactDOM.render(<Router history={browserHistory}>
         {/* 重定向到/aboutMe */}
             <IndexRedirect to="/aboutMe" />
             <Route component={AboutMe} path="/aboutMe"></Route>
-            <Route component={Demo} path="/demo"></Route>
+            <Route component={Demo} path="/demo">
+                <IndexRedirect  to="/merchantManage/directMerchantList" />
+                <Route path="/merchantManage/directMerchantList" component={DirectMerchantList}></Route>
+                    {/* <IndexRedirect to="/directMerchantList" />
+                    <Route component={} path="/directMerchantList"></Route> */}
+            </Route>
             <Route component={Blog} path="/blog"></Route>
         </Route>
     </Route>
