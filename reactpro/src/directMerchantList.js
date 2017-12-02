@@ -39,67 +39,68 @@ class DirectMerchantList extends Component{
             title: 'Action',
             key: 'action',
             render: (text, record) => (
-                <Button type="primary">详情{record.name}</Button>
+              <Link to={"/merchantManage/merchantdetail/"+record.name}><Button type="primary"> 详情{record.name}</Button></Link>
+              //  <Button type="primary"> <Link to="/merchantManage/directMerchantList/detail">详情{record.name}</Link></Button>
             ),
           }],
         //   填入表格的数据，从后台获取
           data : [{
             key: '1',
-            name: '24387474',
+            name: '2432321',
             age: "在辉科技有限公司",
             address: 'dereekyang@163.com',
             status:"已审核"
           }, {
             key: '2',
-            name: '24387474',
+            name: '24382434',
             age: "五二型",
             address: 'dereekyang@163.com',
             status:"审核中"
           }, {
             key: '3',
-            name: '24387474',
+            name: '24381174',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '4',
-            name: '24387474',
+            name: '24384422',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '5',
-            name: '24387474',
+            name: '24383211',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '6',
-            name: '24387474',
+            name: '243853411',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '7',
-            name: '24387474',
+            name: '2438666',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '8',
-            name: '24387474',
+            name: '2438788',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '9',
-            name: '24387474',
+            name: '24388866',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"
           }, {
             key: '10',
-            name: '24387474',
+            name: '24386688',
             age: "百度合计",
             address: 'dereekyang@163.com',
             status:"未审核"

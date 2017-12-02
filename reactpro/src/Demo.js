@@ -7,12 +7,12 @@ const SubMenu = Menu.SubMenu;
 class Demo extends Component{
     state = {
         collapsed: false,
-      };
-      toggle = () => {
-        this.setState({
-          collapsed: !this.state.collapsed,
-        });
-      }
+    };
+    toggle = () => {
+      this.setState({
+        collapsed: !this.state.collapsed,
+      });
+    }
     render(){
         return (
             <div>
@@ -23,13 +23,13 @@ class Demo extends Component{
                collapsed={this.state.collapsed}
              >
                <div className="logo"></div>
-               <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+               <Menu theme="dark" mode="inline">
                  <SubMenu
                   key="sub1"
                   title={<span><Icon type="shop" /><span>商户管理</span></span>}
                 >
-                  <Menu.Item key="1">直销商户列表</Menu.Item>
-                  <Menu.Item key="2">分销商户列表</Menu.Item>
+                  <Menu.Item key="1"><Link to="/merchantManage/directMerchantList">直销商户列表</Link></Menu.Item>
+                  <Menu.Item key="2"><Link to="/merchantManage/distributionMerchantList">分销商户列表</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu
                   key="sub2"

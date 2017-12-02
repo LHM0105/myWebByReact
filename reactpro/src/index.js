@@ -17,6 +17,10 @@ import AboutMe from './AboutMe'
 import Blog from './Blog'
 import Demo from './Demo'
 import DirectMerchantList from './directMerchantList'
+import DemoHome from './DemoHome'
+import MerchantManage from './MerchantManage'
+import DistributionMerchantList from "./DistributionMerchantList"
+import ShopDetail from "./ShopDetail"
 ReactDOM.render(<Router history={browserHistory}>
     <Route path="/" component={App}>
         <IndexRoute component={Home}></IndexRoute>
@@ -25,8 +29,14 @@ ReactDOM.render(<Router history={browserHistory}>
             <IndexRedirect to="/aboutMe" />
             <Route component={AboutMe} path="/aboutMe"></Route>
             <Route component={Demo} path="/demo">
-                <IndexRedirect  to="/merchantManage/directMerchantList" />
-                <Route path="/merchantManage/directMerchantList" component={DirectMerchantList}></Route>
+                <IndexRedirect  to="/demoHome" />
+                <Route path="/demoHome" component={DemoHome}></Route>
+                <Route path="/merchantManage" component={MerchantManage}>
+                    <IndexRedirect to="/merchantManage/directMerchantList" />
+                    <Route path="/merchantManage/directMerchantList" component={DirectMerchantList}></Route>
+                    <Route path="/merchantManage/distributionMerchantList" component={DistributionMerchantList}></Route>
+                </Route>
+                <Route path="/merchantManage/merchantdetail/:shopId" component={ShopDetail}></Route>
                     {/* <IndexRedirect to="/directMerchantList" />
                     <Route component={} path="/directMerchantList"></Route> */}
             </Route>
